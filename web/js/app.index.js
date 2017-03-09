@@ -1,6 +1,6 @@
 $(function () {
 
-    setInterval(fetchData, 2000)
+    setInterval(fetchData, 300)
 })
 
 function fetchData() {
@@ -8,6 +8,7 @@ function fetchData() {
     $.get("http://localhost:5000/", function (data) {
         console.log(data)
         $('#count').text(data[0])
+        $("#photo").prop('src', "/img/photoFromCam.jpg?" + new Date().getTime())
     })
         .done(function () {
 
@@ -18,3 +19,4 @@ function fetchData() {
         .always(function () {
         });
 }
+//php app/console server:start
