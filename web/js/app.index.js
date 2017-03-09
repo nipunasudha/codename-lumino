@@ -1,5 +1,5 @@
 $(function () {
-
+    alert()
     setInterval(fetchData, 300)
 })
 
