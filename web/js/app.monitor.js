@@ -19,4 +19,3 @@ function fetchData() {
         .always(function () {
         });
 }
-//php app/console server:start
