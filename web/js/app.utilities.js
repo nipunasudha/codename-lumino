@@ -7,7 +7,12 @@ function paldi_post(data, callback) {
         data: data,
         success: function (data) {
             // console.log(data)
-            callback(data)
+
+            if (callback && typeof(callback) === "function") {
+
+                callback(data)
+            }
+
         },
         error: function () {
             console.log("Error occured!")
@@ -23,7 +28,10 @@ function paldi_get(data, callback) {
         data: data,
         success: function (data) {
             // console.log(data)
-            callback(data)
+            if (callback && typeof(callback) === "function") {
+
+                callback(data)
+            }
         },
         error: function () {
             console.log("Error occured!")

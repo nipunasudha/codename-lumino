@@ -1,15 +1,20 @@
 $(function () {
-    setInterval(fetchData, 1000)
+    setInterval(fetchData, 6000)
 })
-
+var dataObj = {'cmd': 'PRINT', 'data': ["any", "thing", "here"]}
 function fetchData() {
     console.log("======req sent======")
     // console.log(data)
     // $('#count').text(data[0])
     // $("#photo").prop('src', "/img/photoFromCam.jpg?" + new Date().getTime())
 
-    paldi_post({'name': 'Kasun Gayashan'}, function (data) {
+    paldi_post(dataObj, function (data) {
         console.log(data)
     })
 
+}
+function exiter() {
+    paldi_post({'cmd': 'EXIT', 'data': ''}, function (data) {
+        console.log(data)
+    })
 }
