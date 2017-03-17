@@ -65,8 +65,34 @@
             </div>
         </div>
     </div><!--/.row-->
+
+    <div data-for="one" class="row chart-options">
+        <div class="col-xs-12">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="sel1">Range:</label>
+                    <select class="form-control" id="sel1">
+                        <option>Within 1 hour</option>
+                        <option>Within 2 hours</option>
+                        <option>Within 3 hours</option>
+                        <option>Within 4 hours</option>
+                    </select>
+                </div>
+                &nbsp;
+                <div class="checkbox">
+                    <label><input type="checkbox"> Show average</label>
+                </div>
+                &nbsp;
+
+                <button type="submit" class="btn btn-default">Reload</button>
+            </form>
+        </div>
+    </div>
+
     <div class="row chart-container">
-        <div class="ct-chart ct-major-twelfth"></div>
+        <div class="col-xs-12 wrapper">
+            <div id="one" class="ct-chart ct-major-twelfth"></div>
+        </div>
     </div>
 
 {% endblock %}

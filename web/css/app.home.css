@@ -1,6 +1,6 @@
 .chart-container {
-  background: white;
-  padding: 20px;
-  margin: 0 0px; }
+  padding: 20px; }
+  .chart-container .wrapper {
+    background: white; }
 
 /*# sourceMappingURL=app.home.css.map */
