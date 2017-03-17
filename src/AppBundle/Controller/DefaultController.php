@@ -9,23 +9,12 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="dashboard")
      */
     public function indexAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('default/home.html.twig', array(
-            'base_dir' => realpath($this->container->getParameter('kernel.root_dir') . '/..') . DIRECTORY_SEPARATOR,
-        ));
-    }
-
-    /**
-     * @Route("/backend-test", name="backendTest")
-     */
-    public function backendTestAction(Request $request)
-    {
-        // replace this example code with whatever you need
-        return $this->render('default/backendTest.html.twig', array(
+        return $this->render('default/dashboard.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir') . '/..') . DIRECTORY_SEPARATOR,
         ));
     }
