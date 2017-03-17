@@ -1,21 +1,15 @@
 $(function () {
-    alert()
-    setInterval(fetchData, 300)
+    setInterval(fetchData, 1000)
 })
 
 function fetchData() {
     console.log("======req sent======")
-    $.get("http://localhost:5000/", function (data) {
-        console.log(data)
-        $('#count').text(data[0])
-        $("#photo").prop('src', "/img/photoFromCam.jpg?" + new Date().getTime())
-    })
-        .done(function () {
+    // console.log(data)
+    // $('#count').text(data[0])
+    // $("#photo").prop('src', "/img/photoFromCam.jpg?" + new Date().getTime())
 
-        })
-        .fail(function () {
-            console.log("error!")
-        })
-        .always(function () {
-        });
+    paldi_post({'name': 'Kasun Gayashan'}, function (data) {
+        console.log(data)
+    })
+
 }

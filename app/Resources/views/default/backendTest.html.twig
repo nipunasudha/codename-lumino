@@ -10,12 +10,13 @@
                 <h1><span>Welcome to</span> Palwatte Distillery </h1>
             </div>
             <p id="count">Initializing live stream...</p>
-
+            <img id="photo" src="#" alt="-">
         </div>
     </div>
 {% endblock %}
 
-{% block javascripts %}
+{% block javascript %}
     {{ parent() }}
     <script src="{{ asset('js/app.monitor.js') }}"></script>
+
 {% endblock %}

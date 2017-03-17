@@ -6,13 +6,14 @@
     <title>Palwatte Distillery - Dashboard</title>
 
     <!--Icons-->
-    <script src="{{ asset('tools/lumino-dashboard-utils/js/lumino.glyphs.js') }}"></script>
     {% block stylesheets %}
-        <link href="{{ asset('tools/lumino-dashboard-utils/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('tools/lumino-dashboard-utils/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('tools/lumino-dashboard-utils/css/lumino-styles.css') }}" rel="stylesheet">
 
     {% endblock %}
+    {#<script src="{{ asset('tools/lumino-dashboard-utils/js/jquery-1.11.1.min.js') }}"></script>#}
+    <script src="{{ asset('bower/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset('tools/lumino-dashboard-utils/js/lumino.glyphs.js') }}"></script>
     <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}">
 </head>
 
@@ -112,8 +113,9 @@
 
 </div>    <!--/.main-->
 {% block javascript %}
-    <script src="{{ asset('tools/lumino-dashboard-utils/js/jquery-1.11.1.min.js') }}"></script>
+
     <script src="{{ asset('tools/lumino-dashboard-utils/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/app.utilities.js') }}"></script>
     <script>
 
         !function ($) {
@@ -130,7 +132,11 @@
             if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
         })
     </script>
+
+
+
 {% endblock %}
+
 
 </body>
 
