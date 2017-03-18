@@ -15,7 +15,7 @@ class MonitorController extends Controller
     public function monitorAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('default/monitor.html.twig', array());
+        return $this->render('monitor/monitor.html.twig', array());
     }
 
 

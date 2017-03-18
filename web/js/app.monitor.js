@@ -13,13 +13,13 @@ function fetchData() {
     })
 
 }
-function exiter() {
+function backendExit() {
     paldi_post({'cmd': 'EXIT', 'data': ''}, function (data) {
         console.log(data)
     })
 }
 
-function cropper() {
+function backendCrop() {
     paldi_post({'cmd': 'CROP', 'data': ''}, function (data) {
         console.log(data)
     })
