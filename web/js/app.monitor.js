@@ -18,3 +18,9 @@ function exiter() {
         console.log(data)
     })
 }
+
+function cropper() {
+    paldi_post({'cmd': 'CROP', 'data': ''}, function (data) {
+        console.log(data)
+    })
+}
